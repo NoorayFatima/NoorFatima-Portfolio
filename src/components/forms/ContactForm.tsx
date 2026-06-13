@@ -1,24 +1,42 @@
 "use client";
 
+import emailjs from "@emailjs/browser";
 import { FormEvent, useRef, useState } from "react";
 import { MaterialIcon } from "@/components/ui/MaterialIcon";
 
+type FormStatus = "idle" | "loading" | "success" | "error";
+
 export function ContactForm() {
-  const [status, setStatus] = useState<"idle" | "loading" | "success">("idle");
+  const [status, setStatus] = useState<FormStatus>("idle");
   const formRef = useRef<HTMLFormElement>(null);
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setStatus("loading");
 
-    setTimeout(() => {
+    if (!formRef.current) return;
+
+    try {
+      setStatus("loading");
+
+      await emailjs.sendForm(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        formRef.current,
+        {
+          publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!,
+        }
+      );
+
+      formRef.current.reset();
       setStatus("success");
-      formRef.current?.reset();
 
       setTimeout(() => {
         setStatus("idle");
       }, 3000);
-    }, 1500);
+    } catch (error) {
+      console.error("EmailJS error:", error);
+      setStatus("error");
+    }
   };
 
   return (
@@ -40,11 +58,12 @@ export function ContactForm() {
             className="form-input-focus w-full rounded-lg border border-border bg-surface-dim px-4 py-3 font-body-md text-on-surface transition-all placeholder:text-text-muted focus:outline-none"
             id="name"
             name="name"
-            placeholder="John Doe"
+            placeholder="Enter your name"
             required
             type="text"
           />
         </div>
+
         <div className="space-y-2">
           <label
             className="font-label-caps text-label-caps text-on-surface"
@@ -56,12 +75,13 @@ export function ContactForm() {
             className="form-input-focus w-full rounded-lg border border-border bg-surface-dim px-4 py-3 font-body-md text-on-surface transition-all placeholder:text-text-muted focus:outline-none"
             id="email"
             name="email"
-            placeholder="john@example.com"
+            placeholder="Enter your email"
             required
             type="email"
           />
         </div>
       </div>
+
       <div className="space-y-2">
         <label
           className="font-label-caps text-label-caps text-on-surface"
@@ -78,6 +98,7 @@ export function ContactForm() {
           type="text"
         />
       </div>
+
       <div className="space-y-2">
         <label
           className="font-label-caps text-label-caps text-on-surface"
@@ -94,11 +115,14 @@ export function ContactForm() {
           rows={5}
         />
       </div>
+
       <button
         className={`flex w-full items-center justify-center gap-3 rounded-lg px-10 py-4 text-body-md font-bold transition-all active:scale-[0.98] md:w-auto ${
           status === "success"
             ? "bg-success text-on-surface"
-            : "bg-primary-container text-on-primary-container hover:bg-accent-hover"
+            : status === "error"
+              ? "bg-red-600 text-white hover:bg-red-700"
+              : "bg-primary-container text-on-primary-container hover:bg-accent-hover"
         }`}
         disabled={status === "loading"}
         type="submit"
@@ -109,12 +133,21 @@ export function ContactForm() {
             <span>Sending...</span>
           </>
         )}
+
         {status === "success" && (
           <>
             <MaterialIcon name="check_circle" />
             <span>Message Sent</span>
           </>
         )}
+
+        {status === "error" && (
+          <>
+            <MaterialIcon name="error" />
+            <span>Failed to Send</span>
+          </>
+        )}
+
         {status === "idle" && (
           <>
             <span>Send Message</span>
@@ -122,6 +155,18 @@ export function ContactForm() {
           </>
         )}
       </button>
+
+      {status === "success" && (
+        <p className="text-sm text-success">
+          Thank you, your message has been sent successfully.
+        </p>
+      )}
+
+      {status === "error" && (
+        <p className="text-sm text-red-500">
+          Something went wrong while sending your message. Please try again.
+        </p>
+      )}
     </form>
   );
 }

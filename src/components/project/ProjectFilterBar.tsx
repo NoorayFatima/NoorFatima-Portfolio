@@ -1,4 +1,4 @@
-"use client";
+/* "use client";
 
 import { useState } from "react";
 import { MaterialIcon } from "@/components/ui/MaterialIcon";
@@ -43,6 +43,53 @@ export function ProjectFilterBar() {
               )}
               {filter}
             </button>
+          );
+        })}
+      </div>
+    </section>
+  );
+}*/
+
+import Link from "next/link";
+
+const filters = [
+  { label: "All", value: "all" },
+  { label: "Featured", value: "featured" },
+  { label: "Frontend", value: "frontend" },
+  { label: "Full-Stack", value: "full-stack" },
+  { label: "AI/ML", value: "ai-ml" },
+  { label: "Live Demo", value: "live-demo" },
+];
+
+type ProjectFilterBarProps = {
+  activeFilter?: string;
+};
+
+export function ProjectFilterBar({
+  activeFilter = "all",
+}: ProjectFilterBarProps) {
+  return (
+    <section className="mx-auto mb-10 max-w-container-max px-gutter">
+      <div className="flex flex-wrap gap-3">
+        {filters.map((filter) => {
+          const isActive = activeFilter === filter.value;
+
+          return (
+            <Link
+              key={filter.value}
+              href={
+                filter.value === "all"
+                  ? "/projects"
+                  : `/projects?filter=${filter.value}`
+              }
+              className={`rounded-full border px-4 py-2 text-sm font-medium transition-all ${
+                isActive
+                  ? "border-primary bg-primary text-on-primary"
+                  : "border-border bg-surface text-text-muted hover:border-border-strong hover:text-on-surface"
+              }`}
+            >
+              {filter.label}
+            </Link>
           );
         })}
       </div>

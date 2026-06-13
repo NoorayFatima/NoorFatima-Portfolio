@@ -9,32 +9,34 @@ import { createPageMetadata } from "@/lib/seo/metadata";
 export const metadata = createPageMetadata({
   title: "About",
   description:
-    "Learn about Noor Fatima — a product-minded software engineer focused on scalable architecture and human-centered design.",
+    "Noor Fatima is a CS graduate and full-stack developer building modern web applications and AI-integrated products with React, Laravel, MERN, PHP, MySQL, and Python.",
   path: "/about",
 });
 
 const interests = [
   {
-    icon: "camera",
-    title: "Street Photography",
+    icon: "auto_awesome",
+    title: "AI & Intelligent Systems",
     description:
-      "Capturing the geometry and candid moments of urban landscapes.",
+      "Exploring how AI is changing the way we build, design, and interact with software and building with it, not just reading about it.",
   },
   {
-    icon: "menu_book",
-    title: "Modern Philosophy",
+    icon: "code",
+    title: "Building Real Products",
     description:
-      "Exploring systems of thought that inform ethics in technology.",
+      "Turning structured ideas into working applications that solve defined problems not just demos or tutorials.",
   },
   {
-    icon: "hiking",
-    title: "Alpine Hiking",
-    description: "Finding mental clarity through long-distance mountain trails.",
+    icon: "design_services",
+    title: "UI & Interface Design",
+    description:
+      "Designing interfaces that feel intentional, clean, and genuinely useful to the person on the other side of the screen.",
   },
   {
-    icon: "terminal",
-    title: "Open Source",
-    description: "Contributing to the tools that build the modern web.",
+    icon: "hub",
+    title: "Modern Web Ecosystem",
+    description:
+      "Staying current with how the frontend, backend, and AI layers of the web are evolving and finding practical ways to apply what I learn.",
   },
 ];
 
@@ -44,190 +46,228 @@ export default function AboutPage() {
       <Navbar variant="standard" />
       <ScrollReveal />
       <main className="pt-32">
+
+        {/* ── HERO ── */}
         <section className="mx-auto mb-section-desktop max-w-container-max px-gutter">
-          <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-12">
-            <div className="scroll-reveal md:col-span-7">
-              <span className="mb-4 block font-label-caps text-label-caps uppercase tracking-widest text-primary">
-                About Me
-              </span>
-              <h1 className="mb-8 max-w-2xl font-headline-h1 text-headline-h1 md:font-display-lg md:text-display-lg">
-                Crafting Digital Solutions with Calm Precision.
-              </h1>
-              <div className="max-w-xl space-y-6 font-body-lg text-body-lg text-text-secondary">
-                <p>
-                  I am a product-minded software engineer based in London,
-                  specializing in the intersection of scalable architecture and
-                  human-centered design. My journey began with a fascination for
-                  how code can bridge the gap between complex problems and
-                  elegant solutions.
-                </p>
-                <p>
-                  With over six years of experience in the industry, I&apos;ve
-                  moved from building simple interfaces to architecting robust web
-                  applications for global enterprises. I believe that true
-                  technical excellence isn&apos;t just about performance—it&apos;s
-                  about building systems that are as maintainable as they are
-                  performant.
-                </p>
-              </div>
+          <div className="mx-auto max-w-3xl text-center">
+            <span className="mb-4 block font-label-caps text-label-caps uppercase tracking-widest text-primary">
+              About Me
+            </span>
+            <h1 className="mb-6 font-headline-h1 text-headline-h1 text-on-surface md:font-display-lg md:text-display-lg">
+              Full-Stack Developer.{" "}
+              <span className="text-primary">AI-Aware.</span>{" "}
+              Always Building.
+            </h1>
+            <p className="mx-auto mb-5 max-w-2xl font-body-lg text-body-lg text-text-secondary">
+              I am Noor Fatima, a Computer Science graduate and full-stack web
+              developer focused on building modern, well-structured web
+              applications that work well for the people using them. My core
+              work spans Node.js, Express, and Laravel on the backend, React
+              and JavaScript on the frontend, and MySQL and MongoDB for data.
+            </p>
+            <p className="mx-auto mb-8 max-w-2xl font-body-lg text-body-lg text-text-secondary">
+              I am not building the same web apps that were being built five
+              years ago. I actively work with AI tools, have completed multiple
+              Google AI certifications, and am building toward a career where
+              web development and intelligent systems genuinely overlap. The way
+              software gets built is changing fast and I am changing with it.
+            </p>
+            <div className="mb-10 flex flex-wrap justify-center gap-3">
+              {["React", "Laravel", "Node.js", "MySQL", "Python", "AI APIs"].map((tech) => (
+                <span
+                  key={tech}
+                  className="rounded-full border border-border bg-surface-container-high px-4 py-1.5 font-label-sm text-label-sm text-on-surface-variant"
+                >
+                  {tech}
+                </span>
+              ))}
             </div>
-            <div className="scroll-reveal md:col-span-5">
-              <div className="group relative">
-                <div className="absolute -inset-4 rounded-xl bg-primary-container/10 blur-2xl transition-all duration-500 group-hover:bg-primary-container/20" />
-                <Image
-                  alt="Noor Fatima"
-                  className="relative aspect-[4/5] w-full rounded-xl border border-border object-cover grayscale transition-all duration-700 hover:grayscale-0"
-                  height={800}
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6P-Q0Yg7zHB9K8XncfL5GfqP8bE31O-viBGwvwTK3xg97I2DLqEbJHTigF52vzSVZTpwS6lxs5mlmb51SVQnB_xALvLgN_0_NwcUOYXOfq5s4COvgzDFvkYE_gqpN3mhTNeD2WJVNOCa7k4ffdTA3QJly4BzaTC_uIsJk0A1LXSkYZTQ1yLN5qWjQlS0PP8J0Lt4ZnG6P22o-VUCGS53on62yJSBGkkpGgwn1UklMjfV1J_XANqsLTGu6G-R-hbyraXZDuhRfEARn"
-                  width={640}
-                />
+            <div className="flex flex-wrap justify-center gap-4">
+              <div className="inline-flex items-center gap-3 rounded-full border border-primary/30 bg-primary-container/20 px-5 py-3">
+                <span className="h-2 w-2 animate-pulse rounded-full bg-primary" />
+                <span className="font-label-md text-label-md text-primary">
+                  Open to high-impact roles &amp; freelance work
+                </span>
               </div>
             </div>
           </div>
         </section>
 
-        <section className="bg-surface-container-low py-section-desktop">
+        {/* ── QUICK FACTS STRIP ── */}
+        <section className="border-y border-border bg-surface-container-low py-10">
           <div className="mx-auto max-w-container-max px-gutter">
-            <div className="scroll-reveal mb-16 text-center">
-              <h2 className="mb-4 font-headline-h2 text-headline-h2">
-                Technical Focus
-              </h2>
-              <p className="mx-auto max-w-2xl text-text-secondary">
-                I specialize in building performance-critical web applications
-                that prioritize the user experience without compromising on
-                technical integrity.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-              <div className="scroll-reveal rounded-xl border border-border bg-surface p-card-padding md:col-span-2">
-                <MaterialIcon
-                  name="architecture"
-                  className="mb-4 text-primary"
-                  filled
-                />
-                <h3 className="mb-4 font-headline-h3 text-headline-h3">
-                  Scalable Architecture
-                </h3>
-                <p className="mb-6 max-w-lg text-text-secondary">
-                  Expertise in Next.js, React, and TypeScript. I build modular
-                  component systems and state management layers that allow teams
-                  to move fast without breaking things.
-                </p>
-                <div className="flex flex-wrap gap-chip-gap">
-                  {["React 18", "Next.js 14", "TypeScript", "GraphQL"].map(
-                    (tag) => (
-                      <span
-                        key={tag}
-                        className="rounded border border-border bg-surface-container-high px-3 py-1 font-label-caps text-label-caps text-on-surface"
-                      >
-                        {tag}
-                      </span>
-                    ),
-                  )}
-                </div>
-              </div>
-              <div className="scroll-reveal flex flex-col justify-end rounded-xl bg-primary-container p-card-padding text-on-primary-container">
-                <MaterialIcon name="speed" className="mb-4 text-4xl" filled />
-                <h3 className="mb-2 font-headline-h3 text-headline-h3">
-                  Web Performance
-                </h3>
-                <p className="font-body-sm text-on-primary-container/80">
-                  Optimizing Core Web Vitals to sub-second levels for global
-                  accessibility.
-                </p>
-              </div>
-              <div className="scroll-reveal rounded-xl border border-border bg-surface p-card-padding">
-                <MaterialIcon name="palette" className="mb-4 text-primary" />
-                <h3 className="mb-4 font-headline-h3 text-headline-h3">
-                  Design Systems
-                </h3>
-                <p className="text-text-secondary">
-                  Bridging the gap between Figma and Code with robust Tailwind
-                  and CSS-in-JS tokens.
-                </p>
-              </div>
-              <div className="scroll-reveal flex flex-col items-center gap-8 rounded-xl border border-border bg-surface p-card-padding md:col-span-2 md:flex-row">
-                <div className="flex-1">
-                  <h3 className="mb-4 font-headline-h3 text-headline-h3">
-                    Product Engineering
-                  </h3>
-                  <p className="text-text-secondary">
-                    I approach code from a business perspective, ensuring that
-                    every feature serves a specific user need and drives
-                    measurable impact.
-                  </p>
-                </div>
-                <div className="flex h-32 w-full items-center justify-center overflow-hidden rounded-lg bg-surface-container-highest md:w-48">
-                  <div className="relative h-full w-full">
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent" />
-                    <div className="flex h-full items-center justify-center gap-2">
-                      <div className="h-12 w-2 rounded-full bg-primary/40" />
-                      <div className="h-20 w-2 rounded-full bg-primary" />
-                      <div className="h-16 w-2 rounded-full bg-primary/60" />
-                    </div>
+            <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
+              {[
+                { icon: "school", label: "Education", value: "BS Computer Science" },
+                { icon: "location_on", label: "Based In", value: "Multan, Pakistan" },
+                { icon: "work", label: "Experienced In", value: "Building Web Applications" },
+                { icon: "auto_awesome", label: "Current Edge", value: "AI-Integrated Dev" },
+              ].map((fact) => (
+                <div key={fact.label} className="flex flex-col gap-1">
+                  <div className="flex items-center gap-2">
+                    <MaterialIcon name={fact.icon} className="text-[18px] text-primary" />
+                    <span className="font-label-caps text-label-caps uppercase tracking-widest text-text-muted">
+                      {fact.label}
+                    </span>
                   </div>
+                  <span className="font-headline-h4 text-headline-h4 text-on-surface">
+                    {fact.value}
+                  </span>
                 </div>
-              </div>
+              ))}
             </div>
           </div>
         </section>
 
+        {/* ── THE DEVELOPER I AM ── */}
         <section className="mx-auto max-w-container-max px-gutter py-section-desktop">
-          <div className="grid grid-cols-1 items-start gap-16 lg:grid-cols-2">
-            <div className="scroll-reveal">
-              <h2 className="mb-12 font-headline-h2 text-headline-h2">
-                Working Style
-              </h2>
-              <div className="space-y-10">
-                {[
-                  {
-                    num: "01",
-                    title: "High Agency",
-                    text: "I don't just wait for tickets. I identify bottlenecks, propose architectural improvements, and take full ownership of the end-to-end delivery.",
-                  },
-                  {
-                    num: "02",
-                    title: "Radical Clarity",
-                    text: "Effective engineering is 50% communication. I prioritize clear documentation, expressive PR descriptions, and concise slack updates.",
-                  },
-                  {
-                    num: "03",
-                    title: "Continuous Learning",
-                    text: "The landscape changes weekly. I dedicate 5 hours a week to researching new patterns and tools to keep our stack modern and efficient.",
-                  },
-                ].map((item) => (
-                  <div key={item.num} className="flex gap-6">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-primary">
-                      <span className="font-bold text-primary">{item.num}</span>
-                    </div>
-                    <div>
-                      <h4 className="mb-2 font-headline-h3 text-headline-h3">
-                        {item.title}
-                      </h4>
-                      <p className="text-text-secondary">{item.text}</p>
-                    </div>
-                  </div>
+          <div className="scroll-reveal mx-auto mb-16 max-w-3xl text-center">
+            <span className="mb-3 block font-label-caps text-label-caps uppercase tracking-widest text-primary">
+              My Positioning
+            </span>
+            <h2 className="mb-6 font-headline-h2 text-headline-h2">
+              Not just a web developer. A modern one.
+            </h2>
+            <p className="font-body-lg text-body-lg text-text-secondary">
+              There is a version of a web developer who builds the same CRUD
+              apps with the same stack indefinitely. That is not the developer
+              I am becoming. I stay close to how the field is moving. AI-assisted
+              development, smarter tooling, prompt engineering, and building
+              applications that incorporate intelligent features rather than
+              just ignoring them.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+            <div className="scroll-reveal rounded-xl border border-border bg-surface p-card-padding">
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary-container">
+                <MaterialIcon name="layers" className="text-on-primary-container text-[24px]" filled />
+              </div>
+              <h3 className="mb-3 font-headline-h3 text-headline-h3">
+                Full-Stack Core
+              </h3>
+              <p className="mb-5 text-text-secondary">
+                React, JavaScript, Bootstrap, Node.js, Express, MongoDB,
+                Laravel, PHP, and MySQL. I have worked across the full
+                application stack in real projects and real client work.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {["Laravel", "React", "MySQL", "Node.js", "MongoDB"].map((t) => (
+                  <span key={t} className="rounded border border-border bg-surface-container-high px-3 py-1 font-label-caps text-label-caps text-on-surface">
+                    {t}
+                  </span>
                 ))}
               </div>
             </div>
-            <div className="scroll-reveal relative">
-              <Image
-                alt="Noor's workspace"
-                className="aspect-[4/3] w-full rounded-xl border border-border object-cover"
-                height={600}
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDS5dW6iDeSE2lvU5s86qwqKTIVLX1Vi3lkor0WlCw9MkUuDZC5hZ4R3SCQzshZkIANy8a95FTbmyDuBGOYsaNPGRB8jxVVEVVG0WEYHSur_XuNvfEsf1W-O48pSb6k5yv9Gknnokhg9zt6mgpy3P6S4UI-OwdvnGq-ecovn6V7ht1Rx36sDm5hrRQn4y8Fqp0s2lFyz3zrXLtjA4nNbKeW7x2dLabqBI6CdMrs9d3S9pQNT9sMdE0wlmzYE96JGQzyW2Y-YtKw3Tv9"
-                width={800}
-              />
-              <div className="absolute -bottom-6 -left-6 hidden max-w-xs rounded-lg border border-border bg-surface p-6 shadow-xl md:block">
-                <p className="font-body-sm text-body-sm italic text-text-secondary">
-                  &quot;Precision is the only substitute for luck in
-                  high-performance software.&quot;
-                </p>
+
+            <div className="scroll-reveal rounded-xl bg-primary-container p-card-padding text-on-primary-container">
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-on-primary-container/10">
+                <MaterialIcon name="auto_awesome" className="text-[24px]" filled />
+              </div>
+              <h3 className="mb-3 font-headline-h3 text-headline-h3">
+                AI Layer
+              </h3>
+              <p className="mb-5 font-body-md text-on-primary-container/80">
+                Completed Google&apos;s full AI Essentials program, built
+                AI-related academic projects, and actively working on
+                integrating AI APIs and prompt-driven features into web
+                applications.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {["Google AI", "Prompt Engineering", "Python", "AI APIs"].map((t) => (
+                  <span key={t} className="rounded border border-on-primary-container/20 bg-on-primary-container/10 px-3 py-1 font-label-caps text-label-caps text-on-primary-container">
+                    {t}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div className="scroll-reveal rounded-xl border border-border bg-surface p-card-padding">
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary-container">
+                <MaterialIcon name="trending_up" className="text-on-primary-container text-[24px]" />
+              </div>
+              <h3 className="mb-3 font-headline-h3 text-headline-h3">
+                Growth Direction
+              </h3>
+              <p className="mb-5 text-text-secondary">
+                Moving toward roles where strong web fundamentals meet AI
+                integration, building products that are not just functional but
+                adaptive, intelligent, and built for how software works now.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {["Next.js", "TypeScript", "AI Integration", "APIs"].map((t) => (
+                  <span key={t} className="rounded border border-border bg-surface-container-high px-3 py-1 font-label-caps text-label-caps text-on-surface">
+                    {t}
+                  </span>
+                ))}
               </div>
             </div>
           </div>
         </section>
 
+        {/* ── WORKING STYLE ── */}
+        <section className="bg-surface-container-low py-section-desktop">
+          <div className="mx-auto max-w-container-max px-gutter">
+            <div className="grid grid-cols-1 items-start gap-16 lg:grid-cols-2">
+              <div className="scroll-reveal">
+                <span className="mb-3 block font-label-caps text-label-caps uppercase tracking-widest text-primary">
+                  Process
+                </span>
+                <h2 className="mb-12 font-headline-h2 text-headline-h2">
+                  How I Work
+                </h2>
+                <div className="space-y-10">
+                  {[
+                    {
+                      num: "01",
+                      title: "Structure Before Speed",
+                      text: "I plan before I build. Understanding the problem, mapping the data model, and thinking through the user flow before writing code leads to fewer rewrites and cleaner outcomes.",
+                    },
+                    {
+                      num: "02",
+                      title: "Real Requirements, Not Assumptions",
+                      text: "At Optibyte I collaborated directly with designers and developers to turn client requirements into working interfaces. Clear communication reduces wasted effort on both sides.",
+                    },
+                    {
+                      num: "03",
+                      title: "Adaptive by Default",
+                      text: "The tools I used two years ago are not the best tools available today. I stay current, adopt better approaches when I find them, and actively bring modern practices into the work I do.",
+                    },
+                  ].map((item) => (
+                    <div key={item.num} className="flex gap-6">
+                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-primary">
+                        <span className="font-bold text-primary">{item.num}</span>
+                      </div>
+                      <div>
+                        <h4 className="mb-2 font-headline-h3 text-headline-h3">{item.title}</h4>
+                        <p className="text-text-secondary">{item.text}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="scroll-reveal relative">
+                <Image
+                  alt="Noor's workspace"
+                  className="aspect-[4/3] w-full rounded-xl border border-border object-cover"
+                  height={600}
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDS5dW6iDeSE2lvU5s86qwqKTIVLX1Vi3lkor0WlCw9MkUuDZC5hZ4R3SCQzshZkIANy8a95FTbmyDuBGOYsaNPGRB8jxVVEVVG0WEYHSur_XuNvfEsf1W-O48pSb6k5yv9Gknnokhg9zt6mgpy3P6S4UI-OwdvnGq-ecovn6V7ht1Rx36sDm5hrRQn4y8Fqp0s2lFyz3zrXLtjA4nNbKeW7x2dLabqBI6CdMrs9d3S9pQNT9sMdE0wlmzYE96JGQzyW2Y-YtKw3Tv9"
+                  width={800}
+                  unoptimized
+                />
+                <div className="absolute -bottom-6 -left-6 hidden max-w-xs rounded-lg border border-border bg-surface p-6 shadow-xl md:block">
+                  <p className="font-body-sm italic text-text-secondary">
+                    &quot;I write code that future-me will actually thank
+                    present-me for.&quot;
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── INTERESTS ── */}
         <section className="border-y border-border bg-surface-container-low py-section-desktop">
           <div className="mx-auto max-w-container-max px-gutter">
             <div className="scroll-reveal mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end">
@@ -236,12 +276,12 @@ export default function AboutPage() {
                   Beyond the Screen
                 </span>
                 <h2 className="font-headline-h2 text-headline-h2">
-                  Personal Interests
+                  What Keeps Me Curious
                 </h2>
               </div>
               <p className="max-w-sm text-text-secondary">
-                When I&apos;m not pushing pixels or refactoring modules,
-                you&apos;ll find me exploring these pursuits.
+                The things I explore, follow, and build toward outside of
+                client and project work.
               </p>
             </div>
             <div className="scroll-reveal grid grid-cols-1 gap-4 md:grid-cols-4">
@@ -254,25 +294,25 @@ export default function AboutPage() {
                     name={item.icon}
                     className="mb-4 text-text-muted transition-colors group-hover:text-primary"
                   />
-                  <h5 className="mb-2 font-headline-h3 text-[18px]">
-                    {item.title}
-                  </h5>
-                  <p className="text-body-sm text-text-muted">
-                    {item.description}
-                  </p>
+                  <h5 className="mb-2 font-headline-h3 text-[18px]">{item.title}</h5>
+                  <p className="text-body-sm text-text-muted">{item.description}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
+        {/* ── CTA ── */}
         <section className="scroll-reveal mx-auto max-w-reading-max px-gutter py-section-desktop text-center">
           <h2 className="mb-6 font-headline-h1 text-headline-h1">
-            Let&apos;s build something remarkable together.
+            Looking for a developer who brings{" "}
+            <span className="text-primary">full-stack depth</span> and a
+            modern edge?
           </h2>
           <p className="mb-10 font-body-lg text-text-secondary">
-            I&apos;m currently open to new collaborations and high-impact
-            engineering roles.
+            I am open to high-impact roles in web development and related
+            fields, and available for freelance engagements where strong
+            execution and modern thinking matter.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 md:flex-row">
             <Link
@@ -285,10 +325,11 @@ export default function AboutPage() {
               href="/projects"
               className="w-full rounded-xl border border-border px-8 py-3 font-bold text-on-surface transition-colors hover:bg-surface-container md:w-auto"
             >
-              View Projects
+              View My Projects
             </Link>
           </div>
         </section>
+
       </main>
       <Footer variant="standard" />
     </div>

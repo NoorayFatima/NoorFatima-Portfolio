@@ -9,7 +9,7 @@ import { createPageMetadata } from "@/lib/seo/metadata";
 export const metadata = createPageMetadata({
   title: "Contact",
   description:
-    "Get in touch for technical partnerships, internship opportunities, or freelance projects.",
+    "Get in touch for technical partnerships, job opportunities, or freelance projects.",
   path: "/contact",
 });
 
@@ -19,17 +19,17 @@ export default function ContactPage() {
       <Navbar variant="standard" />
       <main className="pb-section-desktop pt-32">
         <div className="mx-auto max-w-container-max px-gutter">
-          <header className="mb-section-desktop grid grid-cols-1 items-start gap-12 lg:grid-cols-12">
-            <div className="lg:col-span-7">
+          <header className="mb-section-desktop text-center">
+            <div className="mx-auto max-w-2xl">
               <span className="mb-4 block font-label-caps text-label-caps uppercase tracking-widest text-primary">
                 Get In Touch
               </span>
               <h1 className="mb-6 font-display-xl text-display-xl-mobile text-on-surface md:text-display-xl">
                 Let&apos;s build something precise.
               </h1>
-              <p className="mb-8 max-w-reading-max font-body-lg text-body-lg text-text-secondary">
-                Whether it is a technical partnership, an internship opportunity,
-                or a freelance project, I am always open to discussing new
+              <p className="mb-8 font-body-lg text-body-lg text-text-secondary">
+                Whether it is a technical partnership, a job opportunity, or a
+                freelance project, I am always open to discussing new
                 challenges in engineering and design.
               </p>
               <div className="inline-flex items-center gap-3 rounded-full border border-border-strong bg-surface-container px-4 py-2">
@@ -67,7 +67,13 @@ export default function ContactPage() {
                       </p>
                     </div>
                   </a>
-                  <a className="group flex items-center gap-4 transition-all" href="#">
+
+                  <a
+                    className="group flex items-center gap-4 transition-all"
+                    href="https://www.linkedin.com/in/noorfatima35"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
                     <div className="flex h-12 w-12 items-center justify-center rounded-lg border border-border bg-surface transition-colors group-hover:border-primary">
                       <MaterialIcon name="link" className="text-primary" />
                     </div>
@@ -76,11 +82,17 @@ export default function ContactPage() {
                         LinkedIn
                       </p>
                       <p className="font-body-md text-body-md text-on-surface">
-                        /in/noorfatima-dev
+                        /in/noorfatima35
                       </p>
                     </div>
                   </a>
-                  <a className="group flex items-center gap-4 transition-all" href="#">
+
+                  <a
+                    className="group flex items-center gap-4 transition-all"
+                    href="https://github.com/NoorayFatima"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
                     <div className="flex h-12 w-12 items-center justify-center rounded-lg border border-border bg-surface transition-colors group-hover:border-primary">
                       <MaterialIcon name="code" className="text-primary" />
                     </div>
@@ -89,7 +101,7 @@ export default function ContactPage() {
                         GitHub
                       </p>
                       <p className="font-body-md text-body-md text-on-surface">
-                        github.com/noorfatima
+                        github.com/NoorayFatima
                       </p>
                     </div>
                   </a>
@@ -101,12 +113,11 @@ export default function ContactPage() {
                   Location
                 </h4>
                 <p className="mb-6 font-body-md text-body-md text-text-secondary">
-                  Working remotely and collaborating globally from London, United
-                  Kingdom.
+                  Working remotely and collaborating globally from Pakistan.
                 </p>
                 <div className="relative h-48 overflow-hidden rounded-lg border border-border-strong">
                   <Image
-                    alt="London skyline"
+                    alt="Islamabad skyline"
                     className="h-full w-full object-cover opacity-50 grayscale"
                     height={300}
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8Zx1sgkEnjN2zJpR5pkE7jdbzH0u1E_KKQ4_mgZ2CkLiC8FINuxFjFRTtNwxwDOZ5xdYsqqV0MwzvEJ-rMiNj4DcFWzMCMUtGeNbsINn1C47fqs5Y9zccjkzZ8ONc82zYe68Ch1T68cIbdBvU885aPiSKB_k06YEJ9Epc3Ox5HHIt86OMPHwwBrI0ce3PQgZHtb71be4oKh9W2rtbrewGbO7rvz_e3IiWLrqB9ky0xalOAL3ISKdmLXdAGDCrIJ0Ys49Ycu365JAy"

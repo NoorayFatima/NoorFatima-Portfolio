@@ -9,6 +9,8 @@ export type ProjectCategory =
 
 export type Project = {
   slug: string;
+  videoUrl?: string;
+  externalUrl?: string;
   title: string;
   tagline: string;
   summary: string;

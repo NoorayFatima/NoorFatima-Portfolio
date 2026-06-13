@@ -22,9 +22,9 @@ export default function ExperiencePage() {
     <div className="bg-background text-on-surface selection:bg-primary-container selection:text-on-primary-container">
       <Navbar variant="standard" />
       <ScrollReveal />
-      <main className="pb-section-desktop pt-32">
+      <main className="pb-section-desktop pt-40">
         <div className="mx-auto max-w-container-max px-gutter">
-          <header className="mb-section-desktop max-w-reading-max">
+          <header className="mx-auto mb-section-desktop max-w-reading-max text-center">
             <span className="mb-4 block font-label-caps text-label-caps text-primary">
               CAREER PROGRESSION
             </span>
@@ -33,7 +33,7 @@ export default function ExperiencePage() {
               <span className="text-primary">precision</span>.
             </h1>
             <p className="font-body-lg text-body-lg text-text-secondary">
-              A record of engineering leadership and technical execution. Focused
+              A record of engineering and technical execution. Focused
               on creating scalable, high-performance systems for modern enterprise
               environments.
             </p>
@@ -46,9 +46,8 @@ export default function ExperiencePage() {
                 {experienceItems.map((item) => (
                   <div key={item.id} className="reveal-on-scroll relative pl-12">
                     <div
-                      className={`absolute left-0 top-2 z-10 h-6 w-6 rounded-full border-2 bg-background ${
-                        item.active ? "border-primary" : "border-border"
-                      }`}
+                      className={`absolute left-0 top-2 z-10 h-6 w-6 rounded-full border-2 bg-background ${item.active ? "border-primary" : "border-border"
+                        }`}
                     >
                       {item.active && (
                         <div className="absolute left-1/2 top-1/2 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary" />

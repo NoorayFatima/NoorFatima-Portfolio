@@ -62,53 +62,86 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
           <p className="mb-8 max-w-2xl font-body-lg text-body-lg text-on-surface-variant">
             {project.tagline}
           </p>
+
           <div className="mb-8 flex flex-wrap gap-x-8 gap-y-4 border-y border-outline-variant py-6 text-on-surface-variant">
             <div>
               <span className="font-bold text-primary">Year:</span> {project.year}
             </div>
-            <div>
-              <span className="font-bold text-primary">Role:</span> {project.role}
-            </div>
-            <div>
-              <span className="font-bold text-primary">Team:</span> {project.team}
-            </div>
+
             <div>
               <span className="font-bold text-primary">Status:</span>{" "}
-              {project.status === "live" ? "Live" : project.status}
+              {project.status === "live"
+                ? "Live"
+                : project.status === "github"
+                  ? "Source Available on GitHub"
+                  : project.status}
             </div>
+
             <div>
               <span className="font-bold text-primary">Stack:</span>{" "}
               {project.stack.join(", ")}
             </div>
           </div>
-          <div className="mb-12 flex gap-4">
+
+          <div className="mb-12 flex flex-wrap gap-4">
             {project.liveUrl && (
               <a
                 href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-2 rounded-lg bg-primary-container px-8 py-3 font-label-md text-label-md text-on-primary-container transition-all hover:bg-opacity-90"
               >
                 <MaterialIcon name="open_in_new" className="text-[20px]" />
                 View Live Demo
               </a>
             )}
+
             {project.githubUrl && (
               <a
                 href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-2 rounded-lg border border-outline-variant px-8 py-3 font-label-md text-label-md text-on-surface transition-all hover:bg-surface-container"
               >
                 <MaterialIcon name="code" className="text-[20px]" />
                 Source Code
               </a>
             )}
+
+            {project.externalUrl && (
+              <a
+                href={project.externalUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 rounded-lg border border-outline-variant px-8 py-3 font-label-md text-label-md text-on-surface transition-all hover:bg-surface-container"
+              >
+                <MaterialIcon name="open_in_new" className="text-[20px]" />
+                View Project Post
+              </a>
+            )}
           </div>
-          <div className="aspect-video overflow-hidden rounded-xl border border-outline-variant bg-surface-container-low">
-            <Image
-              alt="Project Cover"
-              className="h-full w-full object-cover"
-              height={630}
-              src={project.coverImage}
-              width={1120}
-            />
+
+          <div className="overflow-hidden rounded-xl border border-outline-variant bg-surface-container-low">
+            {project.videoUrl ? (
+              <video
+                controls
+                playsInline
+                preload="metadata"
+                poster={project.coverImage}
+                className="h-full w-full object-cover"
+              >
+                <source src={project.videoUrl} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            ) : (
+              <Image
+                alt="Project Cover"
+                className="h-full w-full object-cover"
+                height={630}
+                src={project.coverImage}
+                width={1120}
+              />
+            )}
           </div>
         </section>
 
@@ -123,11 +156,13 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
               ))}
             </div>
           </div>
+
           <div className="md:col-span-4">
             <div className="rounded-xl border border-outline-variant bg-surface-container p-stack-lg">
               <h3 className="mb-6 font-headline-sm text-headline-sm">
                 Project Details
               </h3>
+
               <div className="space-y-6">
                 <div>
                   <span className="mb-2 block font-label-sm text-label-sm uppercase text-primary">
@@ -144,6 +179,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                     ))}
                   </div>
                 </div>
+
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <span className="mb-1 block font-label-sm text-label-sm uppercase text-primary">
@@ -153,6 +189,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                       {project.role}
                     </span>
                   </div>
+
                   <div>
                     <span className="mb-1 block font-label-sm text-label-sm uppercase text-primary">
                       Year
@@ -162,22 +199,40 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                     </span>
                   </div>
                 </div>
+
                 <div className="flex flex-col gap-3 border-t border-outline-variant pt-4">
                   {project.githubUrl && (
                     <a
                       href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex items-center justify-between text-on-surface transition-colors hover:text-primary"
                     >
                       <span className="font-label-md">GitHub Repository</span>
                       <MaterialIcon name="north_east" className="text-[18px]" />
                     </a>
                   )}
+
                   {project.liveUrl && (
                     <a
                       href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex items-center justify-between text-on-surface transition-colors hover:text-primary"
                     >
                       <span className="font-label-md">Live Platform</span>
+                      <MaterialIcon name="north_east" className="text-[18px]" />
+                    </a>
+                  )}
+
+                  {project.externalUrl && (
+                    <a
+                      href={project.externalUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-between text-on-surface transition-colors hover:text-primary"
+                    >
+                      <span className="font-label-md">Project Post</span>
                       <MaterialIcon name="north_east" className="text-[18px]" />
                     </a>
                   )}
@@ -199,6 +254,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
               {project.problem}
             </p>
           </div>
+
           <div className="group relative overflow-hidden rounded-xl border border-outline-variant bg-surface-container-low p-stack-lg">
             <div className="absolute right-0 top-0 p-4 opacity-10 transition-opacity group-hover:opacity-20">
               <MaterialIcon name="bolt" className="text-[120px]" />
@@ -253,7 +309,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                   <figure className="overflow-hidden rounded-xl border border-outline-variant bg-surface-container-high">
                     <Image
                       alt={shot.alt}
-                      className="w-full cursor-zoom-in grayscale transition-all duration-500 hover:grayscale-0"
+                      className="w-full cursor-zoom-in transition-all duration-500"
                       height={400}
                       src={shot.src}
                       width={600}
@@ -273,27 +329,18 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
             Technical Architecture
           </h2>
           <div className="grid items-start gap-12 md:grid-cols-2">
-            <div className="relative flex min-h-[400px] flex-col items-center justify-center rounded-xl border border-outline-variant bg-surface-container p-stack-lg text-on-surface-variant">
-              <div
-                className="absolute left-0 top-0 h-full w-full opacity-10"
-                style={{
-                  backgroundImage:
-                    "radial-gradient(#80d5cb 1px, transparent 0)",
-                  backgroundSize: "24px 24px",
-                }}
-              />
-              <MaterialIcon
-                name="account_tree"
-                className="relative z-10 mb-4 text-[64px] text-primary"
-              />
-              <p className="relative z-10 font-label-md text-on-background">
-                High-Level System Flow Diagram
-              </p>
-              <p className="relative z-10 mt-2 text-xs">
-                [Client React App] ↔ [Nginx Reverse Proxy] ↔ [Express API +
-                Socket Server] ↔ [MongoDB Cluster]
-              </p>
-            </div>
+            {project.architectureImage && (
+              <div className="overflow-hidden rounded-xl border border-outline-variant bg-surface-container">
+                <Image
+                  alt={`${project.title} architecture diagram`}
+                  className="h-full w-full object-cover"
+                  height={800}
+                  src={project.architectureImage}
+                  width={1200}
+                />
+              </div>
+            )}
+
             <div className="space-y-6">
               {project.architectureNotes.map((note) => (
                 <div key={note.title} className="border-l-2 border-primary pl-6">
@@ -359,6 +406,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                 ))}
               </ul>
             </div>
+
             <div>
               <h4 className="mb-4 font-headline-sm text-on-background">
                 Personal Growth
@@ -396,7 +444,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                   <div className="h-48 overflow-hidden bg-surface-container-high">
                     <Image
                       alt={related.title}
-                      className="h-full w-full object-cover opacity-60 grayscale transition-all duration-500 hover:opacity-100 hover:grayscale-0"
+                      className="h-full w-full object-cover opacity-60 transition-all duration-500 hover:opacity-100"
                       height={300}
                       src={related.coverImage}
                       width={500}

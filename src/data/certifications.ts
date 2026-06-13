@@ -2,57 +2,100 @@ import type { Certification } from "@/types";
 
 export const certifications: Certification[] = [
   {
-    id: "meta-frontend",
-    title: "Meta Front-End Developer",
-    issuer: "Coursera / Meta",
-    issueDate: "Oct 2023",
+    id: "google-ai-essentials-v1",
+    title: "Google AI Essentials V1",
+    issuer: "Coursera / Google",
+    issueDate: "Aug 2025",
     description:
-      "Validated expertise in React, UI/UX principles, and modern CSS frameworks like Tailwind.",
-    icon: "terminal",
+      "Completed Google's AI Essentials program covering practical AI concepts, tools, and responsible use of AI in professional workflows.",
+    icon: "auto_awesome",
+    credentialUrl:
+      "https://www.credly.com/badges/ec2850d8-ad00-4fd6-9c38-aa69eb6a25c3/linked_in_profile",
   },
   {
-    id: "gcp-associate",
-    title: "Google Cloud Associate",
-    issuer: "Google Cloud",
-    issueDate: "Jan 2024",
+    id: "google-ai-essentials",
+    title: "Google AI Essentials",
+    issuer: "Google / Coursera",
+    issueDate: "Aug 2025",
     description:
-      "Certification focused on deploying apps, monitoring operations, and managing enterprise solutions.",
-    icon: "cloud",
+      "Validated understanding of AI fundamentals, prompt engineering, and how to leverage AI tools effectively in real-world tasks.",
+    icon: "psychology",
+    credentialUrl:
+      "https://www.coursera.org/account/accomplishments/specialization/JWA54C85F7BH",
+    
   },
   {
-    id: "aws-solutions",
-    title: "AWS Solutions Architect",
-    issuer: "Amazon Web Services",
-    issueDate: "Mar 2024",
+    id: "discover-art-of-prompting",
+    title: "Discover the Art of Prompting",
+    issuer: "Google / Coursera",
+    issueDate: "Jul 2025",
     description:
-      "Architecting highly available and scalable systems using core AWS infrastructure services.",
-    icon: "settings_ethernet",
+      "Learned structured prompting techniques to get precise, useful outputs from AI tools across writing, coding, and analysis tasks.",
+    icon: "tips_and_updates",
+    credentialUrl:
+      "https://www.coursera.org/account/accomplishments/verify/6BXY8RWHQW2M",
+
   },
   {
-    id: "google-ux",
-    title: "Google UX Design Professional",
-    issuer: "Google",
-    issueDate: "Jun 2023",
+    id: "maximize-productivity-ai",
+    title: "Maximize Productivity with AI Tools",
+    issuer: "Google / Coursera",
+    issueDate: "Jul 2025",
     description:
-      "End-to-end design process: from empathetic research to high-fidelity interactive prototyping.",
-    icon: "palette",
+      "Explored how to integrate AI tools into daily professional workflows to improve speed, quality, and output across tasks.",
+    icon: "bolt",
+    credentialUrl:
+      "https://www.coursera.org/account/accomplishments/records/9TIIQ2IY6HOQ",
   },
   {
-    id: "ibm-security",
-    title: "Cybersecurity Foundations",
-    issuer: "IBM / EdX",
-    issueDate: "Aug 2023",
+    id: "introduction-to-ai",
+    title: "Introduction to AI",
+    issuer: "Google / Coursera",
+    issueDate: "Jul 2025",
     description:
-      "Understanding threat landscapes, network security, and defensive posture for modern web apps.",
-    icon: "shield_lock",
+      "Foundational certification covering core AI concepts, machine learning basics, and practical applications across industries.",
+    icon: "smart_toy",
+    credentialUrl:
+      "https://www.coursera.org/account/accomplishments/records/X2VQIN4E8TK9",
   },
   {
-    id: "deeplearning-ai",
-    title: "Deep Learning Specialization",
-    issuer: "DeepLearning.AI",
-    issueDate: "Dec 2023",
+    id: "introduction-to-csharp",
+    title: "Introduction to C#",
+    issuer: "Simplilearn",
+    issueDate: "Mar 2025",
     description:
-      "Building neural networks, hyperparameter tuning, and structuring machine learning projects.",
-    icon: "memory",
+      "Covered C# fundamentals including syntax, object-oriented programming concepts, and basic application development.",
+    icon: "code",
+    credentialUrl: "https://www.linkedin.com/in/noorfatima35/overlay/Certifications/1822978117/treasury/?profileId=ACoAAEAcIkIBinzZTL_0Twtpnpr8UN-Q4caoiXI",
+  },
+  {
+    id: "wordpress-website-development",
+    title: "WordPress Website Development",
+    issuer: "AS Community Hub",
+    issueDate: "Jul 2024",
+    description:
+      "Built and designed WordPress websites covering theme customization, plugins, layout design, and content management.",
+    icon: "web",
+    credentialUrl: "https://www.linkedin.com/in/noorfatima35/overlay/Certifications/1104966744/treasury/?profileId=ACoAAEAcIkIBinzZTL_0Twtpnpr8UN-Q4caoiXI",
+  },
+  {
+    id: "web-development-course",
+    title: "Web Development Course",
+    issuer: "AS Community Hub",
+    issueDate: "Jul 2024",
+    description:
+      "Completed a structured web development program covering front-end fundamentals, HTML, CSS, and core web technologies.",
+    icon: "language",
+    credentialUrl: "https://www.linkedin.com/in/noorfatima35/overlay/Certifications/1104463530/treasury/?profileId=ACoAAEAcIkIBinzZTL_0Twtpnpr8UN-Q4caoiXI",
+  },
+  {
+    id: "frontend-fundamentals",
+    title: "Front-End Fundamentals",
+    issuer: "Pirple.com",
+    issueDate: "May 2024",
+    description:
+      "Validated foundational front-end skills in HTML5 and CSS3, covering semantic structure, styling, and responsive layout basics.",
+    icon: "html",
+    credentialUrl: "https://www.linkedin.com/in/noorfatima35/overlay/Certifications/1104784593/treasury/?profileId=ACoAAEAcIkIBinzZTL_0Twtpnpr8UN-Q4caoiXI",
   },
 ];
