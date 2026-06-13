@@ -11,6 +11,7 @@ export type Project = {
   slug: string;
   videoUrl?: string;
   externalUrl?: string;
+  architectureImage?: string;
   title: string;
   tagline: string;
   summary: string;
