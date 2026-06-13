@@ -1,4 +1,4 @@
-export type ProjectStatus = "live" | "github" | "private-demo" | "local-only";
+export type ProjectStatus = "live" | "github" | "case-study";
 
 export type ProjectCategory =
   | "frontend"
