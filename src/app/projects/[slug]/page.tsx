@@ -53,7 +53,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
 
   return (
     <div className="theme-project-detail bg-background font-body-md text-body-md text-on-background">
-      <Navbar variant="project-detail" />
+      <Navbar variant="standard" />
       <main className="pb-section-padding pt-24">
         <section className="mx-auto mb-16 max-w-[1120px] px-6">
           <h1 className="mb-4 font-display-lg text-display-lg-mobile text-on-background md:text-display-lg">
@@ -116,7 +116,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                 className="flex items-center gap-2 rounded-lg border border-outline-variant px-8 py-3 font-label-md text-label-md text-on-surface transition-all hover:bg-surface-container"
               >
                 <MaterialIcon name="open_in_new" className="text-[20px]" />
-                View Project Post
+                Linkedin Post
               </a>
             )}
           </div>

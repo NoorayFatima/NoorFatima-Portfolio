@@ -70,7 +70,7 @@ export function ProjectFilterBar({
 }: ProjectFilterBarProps) {
   return (
     <section className="mx-auto mb-10 max-w-container-max px-gutter">
-      <div className="flex flex-wrap gap-3">
+      <div className="flex flex-wrap justify-center gap-3">
         {filters.map((filter) => {
           const isActive = activeFilter === filter.value;
 

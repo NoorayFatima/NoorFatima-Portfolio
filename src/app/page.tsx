@@ -65,26 +65,31 @@ export default function HomePage() {
       <main className="pt-16">
 
         {/* ── HERO ── */}
+        {/* ── HERO ── */}
         <section className="reveal active mx-auto max-w-[1120px] px-gutter pb-16 pt-12">
-          <div className="grid grid-cols-1 items-center gap-16 md:grid-cols-12">
-
+          <div className="grid grid-cols-1 items-start gap-14 md:grid-cols-12 md:gap-12 lg:gap-16">
             {/* Left: Text */}
-            <div className="md:col-span-7">
+            <div className="md:col-span-7 lg:col-span-7">
               <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-primary/30 bg-primary-container/20 px-4 py-2">
                 <span className="h-2 w-2 animate-pulse rounded-full bg-primary" />
                 <span className="font-label-sm text-label-sm text-primary">
                   Open to high-impact roles &amp; freelance work
                 </span>
               </div>
-              <h1 className="mb-6 max-w-lg font-display-md text-display-lg-mobile text-on-surface md:text-display-lg">
-                Full-Stack Developer building practical, user-focused web applications.
+
+              <h1 className="mb-6 max-w-[13ch] font-display-md text-[clamp(2.2rem,3.8vw,4.1rem)] font-bold leading-[1.15] tracking-[-0.05em] text-on-surface md:max-w-[14ch] lg:max-w-[15ch]">
+                <span className="block whitespace-nowrap">Full-Stack Developer</span>
+                <span className="block whitespace-nowrap">building practical,</span>
+                <span className="block whitespace-nowrap">user-focused</span>
+                <span className="block whitespace-nowrap">web applications.</span>
               </h1>
+
               <p className="mb-8 max-w-xl font-body-lg text-body-lg text-on-surface-variant">
-                I am Noor Fatima, a CS graduate who works across the full stack.
-                I build with React, Laravel, the MERN stack, PHP, MySQL, and
-                Python. I also integrate AI where it genuinely improves what a
-                product does, not just for the sake of it.
+                I am Noor Fatima, a CS graduate who works across the full stack. I build
+                with the MERN stack, PHP, Laravel, MySQL, and Python. I also integrate AI
+                where it genuinely improves what a product does, not just for the sake of it.
               </p>
+
               <div className="mb-10 flex flex-wrap gap-3">
                 {["React", "Laravel", "Node.js", "MySQL", "Python", "AI APIs"].map((tech) => (
                   <span
@@ -95,6 +100,7 @@ export default function HomePage() {
                   </span>
                 ))}
               </div>
+
               <div className="flex flex-wrap gap-4">
                 <Link
                   href="/projects"
@@ -113,27 +119,53 @@ export default function HomePage() {
             </div>
 
             {/* Right: Profile Photo */}
-            <div className="hidden md:col-span-5 md:block">
-              <div className="group relative">
-                <div className="absolute -inset-4 rounded-2xl bg-primary-container/10 blur-2xl transition-all duration-500 group-hover:bg-primary-container/20" />
-                <Image
-                  alt="Noor Fatima"
-                  className="relative aspect-[4/5] w-full rounded-2xl border border-[#262d3d] object-cover grayscale transition-all duration-700 hover:grayscale-0"
-                  height={800}
-                  src="/images/profile.png"
-                  width={640}
-                />
-                <div className="absolute -bottom-4 -right-4 rounded-xl border border-[#262d3d] bg-[#151923] px-5 py-3 shadow-xl">
-                  <p className="font-label-sm text-label-sm text-on-surface-variant">
-                    CS Graduate
-                  </p>
-                  <p className="text-[15px] font-semibold text-on-surface">
-                    Full-Stack Developer
-                  </p>
+            <div className="md:col-span-5 lg:col-span-5">
+              <div className="mx-auto flex w-full max-w-[460px] flex-col">
+                <div className="mb-4 flex items-center justify-end">
+                  <div className="flex items-center gap-2 rounded-full border border-[#262d3d] bg-[#151923] px-3 py-2 shadow-lg">
+                    <a
+                      href="https://github.com/NoorayFatima"
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label="GitHub profile"
+                      className="rounded-full px-4 py-2 font-label-sm text-label-sm text-on-surface transition-all duration-200 hover:bg-primary-container/20 hover:text-primary"
+                    >
+                      GitHub
+                    </a>
+                    <span className="h-4 w-px bg-[#2b3446]" />
+                    <a
+                      href="https://www.linkedin.com/in/noorfatima35/"
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label="LinkedIn profile"
+                      className="rounded-full px-4 py-2 font-label-sm text-label-sm text-on-surface transition-all duration-200 hover:bg-primary-container/20 hover:text-primary"
+                    >
+                      LinkedIn
+                    </a>
+                  </div>
+                </div>
+
+                <div className="group relative">
+                  <div className="absolute -inset-4 rounded-2xl bg-primary-container/10 blur-2xl transition-all duration-500 group-hover:bg-primary-container/20" />
+                  <Image
+                    alt="Noor Fatima"
+                    className="relative aspect-[4/5] w-full rounded-2xl border border-[#262d3d] object-cover grayscale transition-all duration-700 hover:grayscale-0"
+                    height={800}
+                    src="/images/profile.png"
+                    width={640}
+                    priority
+                  />
+                  <div className="absolute -bottom-4 -right-4 rounded-xl border border-[#262d3d] bg-[#151923] px-5 py-3 shadow-xl">
+                    <p className="font-label-sm text-label-sm text-on-surface-variant">
+                      CS Graduate
+                    </p>
+                    <p className="text-[15px] font-semibold text-on-surface">
+                      Full-Stack Developer
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-
           </div>
         </section>
 
@@ -214,9 +246,8 @@ export default function HomePage() {
                   (skill, i, arr) => (
                     <li
                       key={skill}
-                      className={`border-outline-variant/10 pb-3 ${
-                        i < arr.length - 1 ? "border-b" : ""
-                      }`}
+                      className={`border-outline-variant/10 pb-3 ${i < arr.length - 1 ? "border-b" : ""
+                        }`}
                     >
                       <span className="font-body-md text-on-surface-variant">
                         {skill}
@@ -239,9 +270,8 @@ export default function HomePage() {
                   (skill, i, arr) => (
                     <li
                       key={skill}
-                      className={`border-outline-variant/10 pb-3 ${
-                        i < arr.length - 1 ? "border-b" : ""
-                      }`}
+                      className={`border-outline-variant/10 pb-3 ${i < arr.length - 1 ? "border-b" : ""
+                        }`}
                     >
                       <span className="font-body-md text-on-surface-variant">
                         {skill}
@@ -264,9 +294,8 @@ export default function HomePage() {
                   (skill, i, arr) => (
                     <li
                       key={skill}
-                      className={`border-outline-variant/10 pb-3 ${
-                        i < arr.length - 1 ? "border-b" : ""
-                      }`}
+                      className={`border-outline-variant/10 pb-3 ${i < arr.length - 1 ? "border-b" : ""
+                        }`}
                     >
                       <span className="font-body-md text-on-surface-variant">
                         {skill}

@@ -22,13 +22,13 @@ export default function ExperiencePage() {
     <div className="bg-background text-on-surface selection:bg-primary-container selection:text-on-primary-container">
       <Navbar variant="standard" />
       <ScrollReveal />
-      <main className="pb-section-desktop pt-40">
+      <main className="pb-section-desktop pt-35">
         <div className="mx-auto max-w-container-max px-gutter">
           <header className="mx-auto mb-section-desktop max-w-reading-max text-center">
             <span className="mb-4 block font-label-caps text-label-caps text-primary">
               CAREER PROGRESSION
             </span>
-            <h1 className="mb-6 font-headline-h1 text-headline-h1">
+            <h1 className="mb-6 font-headline-h1 text-headline-h1 text-on-surface md:font-display-lg md:text-display-lg">
               Building digital infrastructure with{" "}
               <span className="text-primary">precision</span>.
             </h1>

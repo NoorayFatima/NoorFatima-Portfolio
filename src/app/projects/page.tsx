@@ -84,9 +84,9 @@ export default async function ProjectsPage({ searchParams }: ProjectsPageProps) 
     <div className="bg-background text-on-background selection:bg-primary selection:text-on-primary">
       <Navbar variant="standard" />
 
-      <main className="pb-section-desktop pt-24">
-        <header className="mx-auto mb-16 max-w-container-max px-gutter">
-          <div className="max-w-reading-max">
+      <main className="pb-section-desktop pt-10 lg:pt-12">
+        <header className="mx-auto mb-16 max-w-container-max px-gutter pt-24 text-center">
+          <div className="mx-auto max-w-reading-max">
             <h1 className="mb-4 font-headline-h1 text-headline-h1 text-on-surface">
               Selected Works
             </h1>

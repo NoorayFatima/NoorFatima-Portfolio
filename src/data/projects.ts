@@ -17,6 +17,7 @@ const sohanAgri: Project = {
   stack: ["Flask", "TensorFlow", "Keras", "HTML5", "CSS3", "JavaScript", "PWA", "gTTS"],
   coverImage: "/images/projects/sohan-agri/cover.png",
   architectureImage: "/images/projects/sohan-agri/architecture.jpg",
+  externalUrl: "https://www.linkedin.com/posts/noorfatima35_agritech-machinelearning-webdevelopment-ugcPost-7470122600967335936-xqd8/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEAcIkIBinzZTL_0Twtpnpr8UN-Q4caoiXI",
   gallery: [
     {
       src: "/images/projects/sohan-agri/homepage.png",
@@ -159,6 +160,7 @@ const smileCareDental: Project = {
   ],
   coverImage: "/images/projects/smilecare/cover.png",
   architectureImage: "/images/projects/smilecare/architecture.png",
+  externalUrl: "https://www.linkedin.com/posts/noorfatima35_smilecare-lead-capture-system-ugcPost-7467600483570888704-DwkR/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEAcIkIBinzZTL_0Twtpnpr8UN-Q4caoiXI",
   gallery: [
     {
       src: "/images/projects/smilecare/chat-ui.png",
@@ -286,6 +288,7 @@ const folio: Project = {
   team: "Solo",
   stack: ["Next.js 15", "TypeScript", "Tailwind CSS", "Node.js", "Express", "MongoDB", "React Quill", "JWT"],
   coverImage: "/images/projects/folio/cover.jpg",
+  externalUrl: "https://www.linkedin.com/posts/noorfatima35_f5f0e8-fullstackdevelopment-mern-ugcPost-7458141146058412032-yy-J/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEAcIkIBinzZTL_0Twtpnpr8UN-Q4caoiXI",
   gallery: [
     {
       src: "/images/projects/folio/text-editor.jpg",
@@ -555,6 +558,7 @@ const progressHub: Project = {
   ],
   githubUrl: "https://github.com/NoorayFatima/Progress-Hub",
   liveUrl: "https://progress-hub.netlify.app/",
+  externalUrl: "https://www.linkedin.com/posts/noorfatima35_webdevelopment-progressivewebapp-debuggingstories-activity-7398662502563282944-sP6R?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEAcIkIBinzZTL_0Twtpnpr8UN-Q4caoiXI",
   overview: [
     "Progress Hub was created to solve a familiar productivity problem: most people rely on separate apps for habits, goals, tasks, and journaling, which creates friction and makes consistency harder to maintain. I wanted to build a single workspace where personal growth tools could live together in one focused environment.",
     "The app is currently frontend-focused and works as a Progressive Web App with browser-based storage, making it fast, installable, and easy to use across desktop and mobile devices. The long-term direction is a full-stack implementation, but the current version already demonstrates a complete product idea with a clean, practical user experience.",
@@ -669,6 +673,7 @@ const weatherDashboard: Project = {
     },
   ],
   githubUrl: "https://github.com/NoorayFatima/Weather-Dashboard",
+  externalUrl: "https://www.linkedin.com/posts/noorfatima35_react-frontenddevelopment-webdevelopment-activity-7367148881123450880-bUVe?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEAcIkIBinzZTL_0Twtpnpr8UN-Q4caoiXI",
   overview: [
     "Weather Dashboard was built as a focused utility project to make weather information easier to access in a single, readable interface. Rather than overcomplicating the experience, the goal was to create something straightforward, practical, and visually clean.",
     "Projects like this are useful because they strengthen the fundamentals of frontend development: API handling, state management, conditional rendering, and UI organization around live external data.",
@@ -864,6 +869,7 @@ const supportTicketSystem: Project = {
   },
 ],
   githubUrl: "https://github.com/NoorayFatima/Support-Ticket-System",
+  externalUrl: "https://www.linkedin.com/posts/noorfatima35_laravel-laravel11-php-activity-7349063602546323458-BcJl?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEAcIkIBinzZTL_0Twtpnpr8UN-Q4caoiXI",
   overview: [
     "Support Ticket System was built to solve a practical business need: customer issues should not disappear into scattered messages, unmanaged inboxes, or informal follow-up. The application gives users a structured way to submit support requests while giving administrators a clear interface to review, prioritize, and respond.",
     "The project is built as a full-stack Laravel application with role-based dashboards for users and admins. Instead of treating support as a basic form submission feature, it approaches it as a workflow system with authentication, protected routes, ticket states, and a cleaner experience for both sides of the interaction.",

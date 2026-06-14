@@ -59,7 +59,7 @@ export const projectArchive: ArchiveProject[] = [
       "https://www.linkedin.com/posts/noorfatima35_webdevelopment-frontenddeveloper-html-activity-7322469616776065024-PKz6?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEAcIkIBinzZTL_0Twtpnpr8UN-Q4caoiXI",
     liveUrl: "https://deliziosorestaurant.netlify.app/",
   },
-  {
+  /*{
     slug: "currency-converter",
     title: "Currency Converter",
     description:
@@ -83,7 +83,7 @@ export const projectArchive: ArchiveProject[] = [
     linkedInUrl:
       "https://www.linkedin.com/posts/noorfatima35_javascript-vanillajs-webdev-activity-7451168637928751105-yfe7?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEAcIkIBinzZTL_0Twtpnpr8UN-Q4caoiXI",
     liveUrl: "https://noorayfatima.github.io/Grade-Tracker/",
-  },
+  },*/
   {
     slug: "crypto-watch",
     title: "Crypto Watch",

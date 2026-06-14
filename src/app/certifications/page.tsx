@@ -14,10 +14,10 @@ export const metadata = createPageMetadata({
 export default function CertificationsPage() {
   return (
     <div className="theme-certifications bg-background font-body-md text-on-background selection:bg-primary/30">
-      <Navbar variant="certifications" />
+      <Navbar variant="standard" />
       <main className="pb-section-padding pt-32">
         <div className="mx-auto max-w-[1120px] px-gutter">
-          <header className="mb-16 max-w-2xl">
+          <header className="mx-auto mb-16 max-w-2xl text-center">
             <h1 className="mb-stack-md font-display-lg text-display-lg-mobile md:text-display-lg">
               Certifications
             </h1>
